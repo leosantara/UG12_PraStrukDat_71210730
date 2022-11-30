@@ -13,13 +13,6 @@ class Tree:
         node_baru.parent = node_parent
         node_parent.child.append(node_baru)
         return node_baru 
-        
-        #tulis kode Anda di sini
-        #1. buat node baru menggunakan Class Node()
-        #2. isi parent dari node baru tersebut dengan node_parent
-        #3. node_parent menambahkan node baru (anaknya)
-        #4. return node baru
-        pass
 
     def sums(self,node):
         sum = 0
@@ -28,9 +21,7 @@ class Tree:
         for anak in node.child:
             sum += self.sums(anak)
         return sum + node.data
-        #tulis kode Anda di sini
-        pass
-                
+
     def sibling(self,node):
         if len(node.parent.child) == 0:
             return node._data
